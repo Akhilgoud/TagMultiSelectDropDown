@@ -1,0 +1,28 @@
+<html ng-app="dropDown">
+
+<head >
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"> </link>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"> </link>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-component-router/angular_1_router.js"/></script>
+  <script src="Scripts/app.js"></script>
+  <script src="Scripts/tagDropDown.js"></script>
+
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <tag-drop-down data="dropDownData"  output="selectedValues">
+    </tag-drop-down>
+
+
+
+    <div class="col-md-offset-3">
+      <p><h4>selectedScope Variable in parent : {{selectedValues}}</h4></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+
+
+
+    <div id="tagdd" ng-cloak>
+      <div class="dropdown tagDropDown" >
+        <button class="btn btn-primary dropdown-toggle custWidth" data-toggle="dropdown" >
+          <span ng-bind="tdd.buttonText"/> &nbsp;&nbsp;  <i class="fa fa-chevron-down"  aria-hidden="true"></i>
+        </button>
+
+        <div class="dropdown-menu custWidth" id="myid"  >
+          <div ng-click="tdd.checkAll()" class="col-md-6" style="cursor:pointer">
+            <i  class="fa fa-check-square" aria-hidden="true"></i> All
+          </div>
+          <div ng-click="tdd.unSelectAll()" class="col-md-6" style="cursor:pointer">
+            <i  class="fa fa-times-rectangle" aria-hidden="true"></i> None
+          </div>
+          <br>
+      <span class="checkbox"  ng-repeat="currentData in tdd.data track by $index" style="word-wrap: break-word;">
+        <label >
+          <span  ng-click="tdd.ItemSelected(currentData,$index)">
+
+               <i  ng-class="{'fa fa-check-square': tdd.dropDownModel[$index], 'fa fa-circle-o': !tdd.dropDownModel[$index]}"  aria-hidden="true"></i>
+
+            <span ng-bind="currentData" class="myid"></span>
+          </span>
+        </label>
+      </span>
+    </div>
+    </div>
+
+
+    </div>
+
+    <style>
+    .custWidth{
+      width: 15%;
+    }
+    #tagdd{
+      padding-left: 1%;
+    }
+
+    </style>
